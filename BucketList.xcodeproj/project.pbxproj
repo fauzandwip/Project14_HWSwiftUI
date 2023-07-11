@@ -12,6 +12,7 @@
 		7BB042F32A5D9C94009F4DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BB042F22A5D9C94009F4DB1 /* Assets.xcassets */; };
 		7BB042F62A5D9C94009F4DB1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BB042F52A5D9C94009F4DB1 /* Preview Assets.xcassets */; };
 		7BB043002A5D9F1D009F4DB1 /* ComparableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB042FF2A5D9F1D009F4DB1 /* ComparableView.swift */; };
+		7BC62FC52A5DA98E00F0BBC7 /* DocumentsDirectoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC62FC42A5DA98E00F0BBC7 /* DocumentsDirectoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		7BB042F22A5D9C94009F4DB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BB042F52A5D9C94009F4DB1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7BB042FF2A5D9F1D009F4DB1 /* ComparableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableView.swift; sourceTree = "<group>"; };
+		7BC62FC42A5DA98E00F0BBC7 /* DocumentsDirectoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsDirectoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				7BB042FF2A5D9F1D009F4DB1 /* ComparableView.swift */,
+				7BC62FC42A5DA98E00F0BBC7 /* DocumentsDirectoryView.swift */,
 			);
 			path = Introduction;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BB042F12A5D9C92009F4DB1 /* ContentView.swift in Sources */,
+				7BC62FC52A5DA98E00F0BBC7 /* DocumentsDirectoryView.swift in Sources */,
 				7BB042EF2A5D9C92009F4DB1 /* BucketListApp.swift in Sources */,
 				7BB043002A5D9F1D009F4DB1 /* ComparableView.swift in Sources */,
 			);
