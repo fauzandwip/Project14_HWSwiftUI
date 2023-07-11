@@ -15,6 +15,7 @@
 		7BC62FC52A5DA98E00F0BBC7 /* DocumentsDirectoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC62FC42A5DA98E00F0BBC7 /* DocumentsDirectoryView.swift */; };
 		7BC62FC72A5DAAF600F0BBC7 /* ViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC62FC62A5DAAF600F0BBC7 /* ViewStates.swift */; };
 		7BC62FC92A5DB08000F0BBC7 /* MapKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC62FC82A5DB08000F0BBC7 /* MapKitView.swift */; };
+		7BC62FCB2A5DC42900F0BBC7 /* FileManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC62FCA2A5DC42900F0BBC7 /* FileManagerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		7BC62FC42A5DA98E00F0BBC7 /* DocumentsDirectoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsDirectoryView.swift; sourceTree = "<group>"; };
 		7BC62FC62A5DAAF600F0BBC7 /* ViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStates.swift; sourceTree = "<group>"; };
 		7BC62FC82A5DB08000F0BBC7 /* MapKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitView.swift; sourceTree = "<group>"; };
+		7BC62FCA2A5DC42900F0BBC7 /* FileManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				7BB042FF2A5D9F1D009F4DB1 /* ComparableView.swift */,
 				7BC62FC42A5DA98E00F0BBC7 /* DocumentsDirectoryView.swift */,
+				7BC62FCA2A5DC42900F0BBC7 /* FileManagerView.swift */,
 				7BC62FC62A5DAAF600F0BBC7 /* ViewStates.swift */,
 				7BC62FC82A5DB08000F0BBC7 /* MapKitView.swift */,
 			);
@@ -163,6 +166,7 @@
 				7BB042EF2A5D9C92009F4DB1 /* BucketListApp.swift in Sources */,
 				7BC62FC72A5DAAF600F0BBC7 /* ViewStates.swift in Sources */,
 				7BB043002A5D9F1D009F4DB1 /* ComparableView.swift in Sources */,
+				7BC62FCB2A5DC42900F0BBC7 /* FileManagerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
