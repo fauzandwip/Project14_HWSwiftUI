@@ -48,13 +48,15 @@ struct ContentView: View {
                                 viewModel.addLocation()
                             } label: {
                                 Image(systemName: "plus")
+                                // challenge 1
+                                // label area will tapped
+                                    .padding()
+                                    .background(.black.opacity(0.75))
+                                    .foregroundColor(.white)
+                                    .font(.title)
+                                    .clipShape(Circle())
+                                    .padding(.trailing)
                             }
-                            .padding()
-                            .background(.black.opacity(0.75))
-                            .foregroundColor(.white)
-                            .font(.title)
-                            .clipShape(Circle())
-                            .padding(.trailing)
                         }
                     }
                 }
