@@ -9,15 +9,12 @@ import MapKit
 import SwiftUI
 
 struct ContentView: View {
-    @State var locations = [Location]()
-    @State private var mapRegion: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 50, longitude: 0), span: MKCoordinateSpan(latitudeDelta: 25, longitudeDelta: 25))
-    
-    @State private var selectedPlace: Location?
+    @StateObject private var viewModel = ViewModel()
     
     var body: some View {
         NavigationView {
             ZStack {
-                Map(coordinateRegion: $mapRegion, annotationItems: locations) { location in
+                Map(coordinateRegion: $viewModel.mapRegion, annotationItems: viewModel.locations) { location in
                     MapAnnotation(coordinate: location.coordinate) {
                         VStack {
                             Image(systemName: "star.circle")
@@ -31,7 +28,7 @@ struct ContentView: View {
                                 .fixedSize()
                         }
                         .onTapGesture {
-                            selectedPlace = location
+                            viewModel.selectedPlace = location
                         }
                     }
                 }
@@ -47,9 +44,7 @@ struct ContentView: View {
                     HStack {
                         Spacer()
                         Button {
-                            let location = Location(id: UUID(), name: "New Location", description: "", latitude: mapRegion.center.latitude, longitude: mapRegion.center.longitude)
-                            
-                            locations.append(location)
+                            viewModel.addLocation()
                         } label: {
                             Image(systemName: "plus")
                         }
@@ -62,11 +57,9 @@ struct ContentView: View {
                     }
                 }
             }
-            .sheet(item: $selectedPlace) { place in
+            .sheet(item: $viewModel.selectedPlace) { place in
                 EditView(location: place) { newLocation in
-                    if let index = locations.firstIndex(of: place) {
-                        locations[index] = newLocation
-                    }
+                    viewModel.update(location: newLocation)
                 }
             }
         }
@@ -75,6 +68,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(locations: [Location.example])
+        ContentView()
     }
 }
