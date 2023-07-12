@@ -8,7 +8,7 @@
 import MapKit
 import Foundation
 
-struct LocationMap: Identifiable, Codable, Equatable {
+struct Location: Identifiable, Codable, Equatable {
     var id: UUID
     var name: String
     var description: String
@@ -19,9 +19,9 @@ struct LocationMap: Identifiable, Codable, Equatable {
         CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
     
-    static let example = LocationMap(id: UUID(), name: "Buckingham Palace", description: "Where Queen Elizabeth lives with her dorgis.", latitude: 51.501, longitude: -0.141)
+    static let example = Location(id: UUID(), name: "Buckingham Palace", description: "Where Queen Elizabeth lives with her dorgis.", latitude: 51.501, longitude: -0.141)
 
-    static func ==(lhs: LocationMap, rhs: LocationMap) -> Bool {
+    static func ==(lhs: Location, rhs: Location) -> Bool {
         lhs.id == rhs.id
     }
 }

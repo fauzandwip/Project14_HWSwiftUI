@@ -9,8 +9,8 @@ import SwiftUI
 
 struct EditView: View {
     @Environment(\.dismiss) var dismiss
-    var location: LocationMap
-    var onSave: (LocationMap) -> Void
+    var location: Location
+    var onSave: (Location) -> Void
     
     @State private var name: String
     @State private var description: String
@@ -38,7 +38,7 @@ struct EditView: View {
         }
     }
     
-    init(location: LocationMap, onSave: @escaping (LocationMap) -> Void ) {
+    init(location: Location, onSave: @escaping (Location) -> Void ) {
         self.location = location
         self.onSave = onSave
         
@@ -49,6 +49,6 @@ struct EditView: View {
 
 struct EditView_Previews: PreviewProvider {
     static var previews: some View {
-        EditView(location: LocationMap.example) { _ in }
+        EditView(location: Location.example) { _ in }
     }
 }
