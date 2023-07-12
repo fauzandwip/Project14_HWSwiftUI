@@ -60,7 +60,9 @@ extension ContentView {
                 let reason = "Please authenticate yourself to unlock your places."
                 context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
                     if success {
-                        self.isUnlocked = true
+                        Task { @MainActor in                        
+                            self.isUnlocked = true
+                        }
                     } else {
                      // error
                     }
