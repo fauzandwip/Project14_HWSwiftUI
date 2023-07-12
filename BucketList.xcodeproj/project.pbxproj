@@ -19,6 +19,7 @@
 		7BC62FCD2A5E6E6D00F0BBC7 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC62FCC2A5E6E6D00F0BBC7 /* AuthenticationView.swift */; };
 		7BC62FD12A5E9BCE00F0BBC7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC62FD02A5E9BCE00F0BBC7 /* Location.swift */; };
 		7BC62FD32A5E9D2300F0BBC7 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC62FD22A5E9D2300F0BBC7 /* EditView.swift */; };
+		7BD58E442A5ED3F90081BEDB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD58E432A5ED3F90081BEDB /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		7BC62FCC2A5E6E6D00F0BBC7 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		7BC62FD02A5E9BCE00F0BBC7 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		7BC62FD22A5E9D2300F0BBC7 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		7BD58E432A5ED3F90081BEDB /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			children = (
 				7BB042EE2A5D9C92009F4DB1 /* BucketListApp.swift */,
 				7BB042F02A5D9C92009F4DB1 /* ContentView.swift */,
+				7BD58E432A5ED3F90081BEDB /* Result.swift */,
 				7BC62FD22A5E9D2300F0BBC7 /* EditView.swift */,
 				7BC62FD02A5E9BCE00F0BBC7 /* Location.swift */,
 				7BB042FC2A5D9EE0009F4DB1 /* Introduction */,
@@ -179,6 +182,7 @@
 				7BB043002A5D9F1D009F4DB1 /* ComparableView.swift in Sources */,
 				7BC62FCD2A5E6E6D00F0BBC7 /* AuthenticationView.swift in Sources */,
 				7BC62FCB2A5DC42900F0BBC7 /* FileManagerView.swift in Sources */,
+				7BD58E442A5ED3F90081BEDB /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
