@@ -36,10 +36,10 @@ struct EditView: View {
                         ProgressView()
                     case .loaded:
                         ForEach(pages, id: \.pageid) { page in
-                            /*@START_MENU_TOKEN@*/Text(page.title)/*@END_MENU_TOKEN@*/
+                            Text(page.title)
                                 .font(.headline)
                             + Text(": ")
-                            + Text("Page description here")
+                            + Text(page.description)
                                 .italic()
                         }
                     case .failed:
@@ -85,9 +85,8 @@ struct EditView: View {
             let decodedData = try JSONDecoder().decode(Result.self, from: data)
             
             // success – convert the array values to our pages array
-            pages = decodedData.query.pages.values.sorted { $0.pageid < $1.pageid }
+            pages = decodedData.query.pages.values.sorted()
             loadingState = LoadingState.loaded
-            
         } catch {
             loadingState = LoadingState.failed
             fatalError("Error: \(error.localizedDescription)")
