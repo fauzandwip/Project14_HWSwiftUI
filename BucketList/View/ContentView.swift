@@ -62,9 +62,10 @@ struct ContentView: View {
                         }
                     }
                     .sheet(item: $viewModel.selectedPlace) { place in
-                        EditView(location: place) { newLocation in
+                        EditView() { newLocation in
                             viewModel.update(location: newLocation)
                         }
+                        .environmentObject(EditView.EditViewModel(location: place))
                     }
                 } else {
                     Button("Unlock Places") {

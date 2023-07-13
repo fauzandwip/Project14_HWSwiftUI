@@ -22,6 +22,7 @@
 		7BD58E442A5ED3F90081BEDB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD58E432A5ED3F90081BEDB /* Result.swift */; };
 		7BF19ABF2A5F4D1900C0A66C /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF19ABE2A5F4D1900C0A66C /* ContentView-ViewModel.swift */; };
 		7BF19AC22A5F4F6200C0A66C /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF19AC12A5F4F6200C0A66C /* FileManager.swift */; };
+		7BF19AC82A5F6E6A00C0A66C /* EditView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF19AC72A5F6E6A00C0A66C /* EditView-ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		7BD58E432A5ED3F90081BEDB /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		7BF19ABE2A5F4D1900C0A66C /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
 		7BF19AC12A5F4F6200C0A66C /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		7BF19AC72A5F6E6A00C0A66C /* EditView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditView-ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				7BF19ABE2A5F4D1900C0A66C /* ContentView-ViewModel.swift */,
+				7BF19AC72A5F6E6A00C0A66C /* EditView-ViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				7BC62FC92A5DB08000F0BBC7 /* MapKitView.swift in Sources */,
 				7BF19ABF2A5F4D1900C0A66C /* ContentView-ViewModel.swift in Sources */,
 				7BB042F12A5D9C92009F4DB1 /* ContentView.swift in Sources */,
+				7BF19AC82A5F6E6A00C0A66C /* EditView-ViewModel.swift in Sources */,
 				7BC62FD32A5E9D2300F0BBC7 /* EditView.swift in Sources */,
 				7BC62FC52A5DA98E00F0BBC7 /* DocumentsDirectoryView.swift in Sources */,
 				7BC62FD12A5E9BCE00F0BBC7 /* Location.swift in Sources */,

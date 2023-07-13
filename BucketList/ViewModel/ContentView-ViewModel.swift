@@ -11,7 +11,10 @@ import MapKit
 
 extension ContentView {
     @MainActor class ViewModel: ObservableObject {
-        @Published var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 50, longitude: 0), span: MKCoordinateSpan(latitudeDelta: 25, longitudeDelta: 25))
+        @Published var mapRegion = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 50, longitude: 0),
+            span: MKCoordinateSpan(latitudeDelta: 25, longitudeDelta: 25)
+        )
         @Published private(set) var locations: [Location]
         @Published var selectedPlace: Location?
         @Published var isUnlocked = false
@@ -23,8 +26,7 @@ extension ContentView {
         init() {
             do {
                 let data = try Data(contentsOf: savePath)
-                let decoded = try JSONDecoder().decode([Location].self, from: data)
-                locations = decoded
+                 locations = try JSONDecoder().decode([Location].self, from: data)
             } catch {
                 locations = []
             }
@@ -40,7 +42,13 @@ extension ContentView {
         }
         
         func addLocation() {
-            let location = Location(id: UUID(), name: "New Location", description: "", latitude: mapRegion.center.latitude, longitude: mapRegion.center.longitude)
+            let location = Location(
+                id: UUID(),
+                name: "New Location",
+                description: "",
+                latitude: mapRegion.center.latitude,
+                longitude: mapRegion.center.longitude)
+            
             locations.append(location)
             save()
         }
@@ -66,14 +74,18 @@ extension ContentView {
                             self.isUnlocked = true
                         }
                     } else {
-                        self.authenticationError = "\(authenticationError?.localizedDescription ?? "Unknown Error")"
-                        self.showingAuthenticationAlert = true
+                        Task { @MainActor in
+                            self.authenticationError = "\(authenticationError?.localizedDescription ?? "Unknown Error")"
+                            self.showingAuthenticationAlert = true
+                        }
                     }
                 }
             } else {
-                // no biometrics
-                authenticationError = "Biometrics authentication unavailable."
-                showingAuthenticationAlert = true
+                Task { @MainActor in
+                    // no biometrics
+                    authenticationError = "Biometrics authentication unavailable."
+                    showingAuthenticationAlert = true
+                }
             }
         }
     }
